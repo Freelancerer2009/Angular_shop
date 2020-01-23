@@ -1,0 +1,28 @@
+<div class="container-fluid">
+        <div class="row">
+          <div class="col-3 p-1">     
+            <button class="btn btn-block btn-danger mt-3" routerLink="/login">
+             <p>Logout</p>
+            </button>           
+          </div>
+          <div class="col-9 p-1">
+            <div *ngFor="let item of currentList" class="card card-outline-primary m-2">
+              <h4 class="card-header">
+                {{item.name}}
+                <span class="float-right badge badge-pill badge-primary">
+                {{item.price | currency}}
+                </span>
+              </h4>
+              <div class="card-text p-1">
+                {{item.description}}
+                <button class="btn btn-success btn-sm float-right m-1"
+                  (click)="editCart(item)"> Edit </button>
+                <button class="btn btn-success btn-sm float-right m-1"
+                (click)="deleteCart(item)"> Delete </button>
+              </div>
+            </div>
+            <button class="btn-warning btn float-right m-1" (click)="addNewProduct()">Добавить новый товар</button>
+          </div>
+      </div>
+  </div>
+      

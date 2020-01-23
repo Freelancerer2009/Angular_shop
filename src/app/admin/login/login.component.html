@@ -1,0 +1,19 @@
+<div class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand">ADMIN PANEL</a>
+</div>
+
+<form [formGroup]="form" novalidate>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Login</label>
+        <input type="text" class="form-control" formControlName="login" placeholder="login">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" formControlName="password" placeholder="password">
+    </div>
+</form>
+    <div class="text-center">
+        <button class="btn btn-dark m-2" routerLink="/store">Back</button>
+        <button class="btn btn-primary" (click)="send()">Login</button>
+    </div>
+
